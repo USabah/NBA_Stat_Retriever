@@ -11,6 +11,7 @@ class QueryViewController: UIViewController, UITextFieldDelegate, UITableViewDel
     
     var nba_brain : NBAModel = NBAModel()
     var auth_brain : AuthModel = AuthModel()
+    var stats_brain : StatsModel = StatsModel()
     
     @IBOutlet weak var playerNameField: UITextField!
     
@@ -79,18 +80,15 @@ class QueryViewController: UIViewController, UITextFieldDelegate, UITableViewDel
         Task {
             do {
                 let player_id = try nba_brain.getPlayerID(playerNameInput: playerNameField.text)
-                print("success1: \(player_id)")
                 let image = try await nba_brain.getPlayerImage(playerId: player_id)
-                
-                
-//                let imageView = UIImageView(image: image)
-//
-//                // Set the frame or constraints for the UIImageView
-//                // For example, to set the frame:
-//                imageView.frame = CGRect(x: 200, y: 200, width: 200, height: 200)
-//
-//                // Add the UIImageView to the view hierarchy
-//                self.view.addSubview(imageView)
+                let player_name = playerNameField.text!.lowercased()
+                var player_info = try await stats_brain.getPlayerInfo(playerName: player_name)
+                player_info["PLAYER"] = player_name.uppercased()
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let statsViewController = storyboard.instantiateViewController(withIdentifier: "StatsViewController") as! StatsViewController
+                statsViewController.player_info = player_info
+                statsViewController.image = image
+                self.navigationController?.pushViewController(statsViewController, animated: false)
             }
             catch RequestError.EmptyText{
                 let myAlert = UIAlertController(title: "Field Is Blank", message: "Please fill in the player name field above.", preferredStyle: .alert)

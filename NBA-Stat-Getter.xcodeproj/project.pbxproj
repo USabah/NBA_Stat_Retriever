@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D64918CE2A1ED51700FB23D1 /* StatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64918CD2A1ED51600FB23D1 /* StatsModel.swift */; };
+		D64918D02A1EDDE400FB23D1 /* StatsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64918CF2A1EDDE400FB23D1 /* StatsError.swift */; };
 		D67742A22A1C108800F5BAC7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D67742A12A1C108700F5BAC7 /* GoogleService-Info.plist */; };
 		D67742A42A1C136700F5BAC7 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67742A32A1C136700F5BAC7 /* AuthModel.swift */; };
 		D67742A62A1C144E00F5BAC7 /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67742A52A1C144E00F5BAC7 /* AuthError.swift */; };
@@ -30,6 +31,7 @@
 		A1D83640BCC04D719443740D /* Pods_NBA_Stat_Getter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NBA_Stat_Getter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBFA38973120081100E16D0C /* Pods-NBA-Stat-Getter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NBA-Stat-Getter.release.xcconfig"; path = "Target Support Files/Pods-NBA-Stat-Getter/Pods-NBA-Stat-Getter.release.xcconfig"; sourceTree = "<group>"; };
 		D64918CD2A1ED51600FB23D1 /* StatsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsModel.swift; sourceTree = "<group>"; };
+		D64918CF2A1EDDE400FB23D1 /* StatsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsError.swift; sourceTree = "<group>"; };
 		D67742A12A1C108700F5BAC7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D67742A32A1C136700F5BAC7 /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
 		D67742A52A1C144E00F5BAC7 /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				D67742AF2A1D4DD100F5BAC7 /* RequestError.swift */,
 				D6F4EAD32A1D847B00CF3B98 /* playerNamesToID.swift */,
 				D6F4EAD52A1EBEDF00CF3B98 /* StatsViewController.swift */,
+				D64918CF2A1EDDE400FB23D1 /* StatsError.swift */,
 			);
 			path = "NBA-Stat-Getter";
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				D6F55F502A04687A004D5003 /* SignInViewController.swift in Sources */,
 				D67742A42A1C136700F5BAC7 /* AuthModel.swift in Sources */,
 				D67742AE2A1D4D0D00F5BAC7 /* NBAModel.swift in Sources */,
+				D64918D02A1EDDE400FB23D1 /* StatsError.swift in Sources */,
 				D67742A82A1C46CC00F5BAC7 /* RegistrationViewController.swift in Sources */,
 				D6F55F4C2A04687A004D5003 /* AppDelegate.swift in Sources */,
 				D6F55F4E2A04687A004D5003 /* SceneDelegate.swift in Sources */,
